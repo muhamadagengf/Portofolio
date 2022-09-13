@@ -1,0 +1,753 @@
+{
+	"info": {
+		"_postman_id": "1d3f94f1-efc6-45e9-af9e-0217110efdce",
+		"name": "Challenge test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22710894"
+	},
+	"item": [
+		{
+			"name": "Post Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "Fadhil",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fadhil6@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "0812345678910",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "mampang",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Fadhil/Desktop/viper-logo-valorant-riot-video-game-wallpaper-2560x1600_7.jpg",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "jakarta",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/auth/register",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "agenk52@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/auth/login",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post seller product 100",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "poster kurt 1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "nirvana 1",
+							"type": "text"
+						},
+						{
+							"key": "base_price",
+							"value": "100000",
+							"type": "text"
+						},
+						{
+							"key": "category_ids",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "cengkareng",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Ageng/Downloads/gambarnih/6246fd3931bda.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/seller/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post seller product 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "poster kurt 2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "nirvana 2",
+							"type": "text"
+						},
+						{
+							"key": "base_price",
+							"value": "200000",
+							"type": "text"
+						},
+						{
+							"key": "category_ids",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "cengkareng",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Ageng/Downloads/gambarnih/original-kurt-cobain-style-43-jpg-151570f5.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/seller/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post seller product 300",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Hobby",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Bola Basket",
+							"type": "text"
+						},
+						{
+							"key": "base_price",
+							"value": "799000",
+							"type": "text"
+						},
+						{
+							"key": "category_ids",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "mampang",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Fadhil/Desktop/bagaimana-cara-bermain-bola-basket-yang-baik-dan-benar-xGPHWIr6pa.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base.url}}/seller/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get seller product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/seller/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get seller product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/seller/product/1286",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product",
+						"1286"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get seller product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/seller/product/1286",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"seller",
+						"product",
+						"1286"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get buyer product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/product",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get buyer product Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "1277",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/product/1285",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"product",
+						"1285"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post/buyer/order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"product_id\": 1280,\r\n  \"bid_price\": 1200000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base.url}}/buyer/order",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/buyer/order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/order",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/buyer/order Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/order/1250",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order",
+						"1250"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base.url}}/buyer/order/1250",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access_token",
+						"value": "{{base.token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base.url}}/buyer/order/1250",
+					"host": [
+						"{{base.url}}"
+					],
+					"path": [
+						"buyer",
+						"order",
+						"1250"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
